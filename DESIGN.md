@@ -1,5 +1,9 @@
 # Book Database Design
 
+youtube link : https://www.youtube.com/shorts/2CYTnzdEVFg
+
+github link : https://github.com/AHMEDALBREEM/BOOKCSSQL
+
 ## Project Goal
 Create a database to manage books, authors, publishers, and user interactions. The database will allow:
 - Tracking book details and metadata
@@ -14,7 +18,7 @@ erDiagram
     BOOKS ||--o{ PUBLISHERS : "published by"
     BOOKS ||--o{ REVIEWS : "has"
     USERS ||--o{ REVIEWS : "writes"
-    
+
     BOOKS {
         int id PK
         string title
@@ -22,19 +26,19 @@ erDiagram
         string isbn
         int publisher_id FK
     }
-    
+
     AUTHORS {
         int id PK
         string name
         string bio
     }
-    
+
     PUBLISHERS {
         int id PK
         string name
         string address
     }
-    
+
     REVIEWS {
         int id PK
         int book_id FK
@@ -43,7 +47,7 @@ erDiagram
         text review
         date review_date
     }
-    
+
     USERS {
         int id PK
         string username
